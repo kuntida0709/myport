@@ -12,7 +12,25 @@ const fadeUp = {
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-[#f8f8f8] font-sans">
+    <div className="min-h-screen font-sans relative overflow-hidden">
+
+      {/* BACKGROUND */}
+      <div className="fixed inset-0 -z-10">
+
+        {/* gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#f8f8f8] via-[#f1f3f7] to-[#ececec]" />
+
+        {/* grid */}
+        <div className="absolute inset-0 
+        bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),
+        linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)]
+        bg-[size:60px_60px]" />
+
+        {/* glow */}
+        <div className="absolute w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-20 top-20 left-20"></div>
+        <div className="absolute w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-20 bottom-20 right-20"></div>
+
+      </div>
 
       <Navbar />
 
@@ -25,16 +43,11 @@ export default function Projects() {
           animate="show"
           className="mb-16"
         >
-          <h1 className="text-5xl font-bold mb-4">
-            Projects
-          </h1>
-
+          <h1 className="text-5xl font-bold mb-4">Projects</h1>
           <div className="w-20 h-1 bg-blue-600"></div>
         </motion.div>
 
-
         <div className="grid md:grid-cols-2 gap-10">
-
 
           {/* PROJECT 1 */}
           <motion.div
@@ -42,8 +55,8 @@ export default function Projects() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            whileHover={{ y: -8, scale: 1.02 }}
-            className="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300"
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="bg-white/90 backdrop-blur p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
           >
 
             <h2 className="text-2xl font-semibold mb-4">
@@ -64,10 +77,8 @@ export default function Projects() {
               <li>Farm data tracking and dashboard</li>
             </ul>
 
-
             {/* TECH STACK */}
             <div className="flex flex-wrap gap-2 mb-6">
-
               {["React","FastAPI","PostgreSQL","AI","ChromaDB"].map((tech,i)=>(
                 <motion.span
                   key={tech}
@@ -75,30 +86,23 @@ export default function Projects() {
                   whileInView={{ opacity:1, scale:1 }}
                   transition={{ delay:i*0.05 }}
                   whileHover={{ y:-3 }}
-                  className="px-3 py-1 bg-gray-100 rounded-md text-sm
-                  hover:bg-blue-100 hover:text-blue-700"
+                  className="px-3 py-1 bg-gray-100 rounded-md text-sm hover:bg-blue-100 hover:text-blue-700"
                 >
                   {tech}
                 </motion.span>
               ))}
-
             </div>
 
-
-            {/* BUTTON */}
             <a
               href="https://github.com/kuntida0709/project68demo4.git"
               target="_blank"
-              className="inline-block px-5 py-2 border border-black rounded-lg
-              hover:bg-black hover:text-white
-              hover:-translate-y-1 hover:shadow-lg
-              transition duration-300"
+              rel="noreferrer"
+              className="inline-block px-5 py-2 border border-black rounded-lg hover:bg-black hover:text-white hover:-translate-y-1 hover:shadow-lg transition duration-300"
             >
               View Code →
             </a>
 
           </motion.div>
-
 
 
           {/* PROJECT 2 */}
@@ -107,8 +111,8 @@ export default function Projects() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            whileHover={{ y: -8, scale: 1.02 }}
-            className="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300"
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="bg-white/90 backdrop-blur p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
           >
 
             <h2 className="text-2xl font-semibold mb-4">
@@ -129,10 +133,8 @@ export default function Projects() {
               <li>Achievement badge and leveling system</li>
             </ul>
 
-
             {/* TECH STACK */}
             <div className="flex flex-wrap gap-2 mb-6">
-
               {["Flutter","Dart","Firebase","REST API"].map((tech,i)=>(
                 <motion.span
                   key={tech}
@@ -140,13 +142,11 @@ export default function Projects() {
                   whileInView={{ opacity:1, scale:1 }}
                   transition={{ delay:i*0.05 }}
                   whileHover={{ y:-3 }}
-                  className="px-3 py-1 bg-gray-100 rounded-md text-sm
-                  hover:bg-blue-100 hover:text-blue-700"
+                  className="px-3 py-1 bg-gray-100 rounded-md text-sm hover:bg-blue-100 hover:text-blue-700"
                 >
                   {tech}
                 </motion.span>
               ))}
-
             </div>
 
           </motion.div>
