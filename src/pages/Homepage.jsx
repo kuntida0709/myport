@@ -169,12 +169,12 @@ export default function Homepage() {
 
           <div>
             <p className="font-semibold">Call</p>
-            <p>000000</p>
+            <p>091-818-3845</p>
           </div>
 
           <div>
             <p className="font-semibold">Email</p>
-            <p>email@example.com</p>
+            <p>oing1602@gmail.com</p>
           </div>
 
         </div>
